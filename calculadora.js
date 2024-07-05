@@ -2,7 +2,16 @@ prompt = require ('prompt-sync')()
 while(true){
 
     let num1 = +prompt("Digite o primeiro número: ")
+    while (isNaN(num1)) {
+        console.log("Insira apenas caracteres numéricos.")
+        num1 = +prompt("Digite o primeiro número: ")
+    }
     let num2 = +prompt("Digite o segundo número: ")
+    while (isNaN(num2)){
+        console.log("Insira apenas caracteres numéricos.")
+        num2 = +prompt("Digite o segundo número: ")
+        }
+
     console.log("Digite a operação desejada: \nadição (1) \nsubtração (2) \nmultiplicação (3) \ndivisão (4) \nporcentagem (5)")
     let operacao= prompt().toLocaleLowerCase().trim()
 
